@@ -51,9 +51,11 @@ export default function Achievement() {
             // Number count-up animation
             const numberElement = stat.querySelector('.stat-number');
             if (numberElement) {
-                const finalNumberString = numberElement.textContent || "0";
-                const hasPlus = finalNumberString.includes('+');
-                const numericValue = parseInt(finalNumberString.replace(/\D/g, ''));
+                const finalString = numberElement.textContent || "0";
+                // Extract prefix, suffix, and the numeric value
+                const prefix = finalString.match(/^\$/) ? '$' : '';
+                const suffix = finalString.match(/[k\+]+$/) ? finalString.match(/[k\+]+$/)![0] : '';
+                const numericValue = parseInt(finalString.replace(/[^\d]/g, ''));
 
                 ScrollTrigger.create({
                     trigger: stat,
@@ -65,7 +67,9 @@ export default function Achievement() {
                             duration: 2,
                             ease: "power1.out",
                             onUpdate: function () {
-                                numberElement.textContent = Math.ceil(obj.val) + (hasPlus ? '+' : '');
+                                const roundedVal = Math.ceil(obj.val);
+                                const formattedVal = roundedVal.toLocaleString();
+                                numberElement.textContent = prefix + formattedVal + suffix;
                             }
                         });
                     },
@@ -94,19 +98,34 @@ export default function Achievement() {
                     </div>
 
                     <div className="stats-grid">
-                        <div className="stat-item large">
-                            <div className="stat-number">200+</div>
-                            <p className="stat-text">Women trained in blockchain development</p>
+                        <div className="stat-item">
+                            <div className="stat-number">1,000+</div>
+                            <p className="stat-text">Scholars supported</p>
                         </div>
 
                         <div className="stat-item">
-                            <div className="stat-number">30+</div>
-                            <p className="stat-text">Projects launched by H.E.R. DAO members</p>
+                            <div className="stat-number">20+</div>
+                            <p className="stat-text">Hackathons organized</p>
                         </div>
 
                         <div className="stat-item">
-                            <div className="stat-number">12</div>
-                            <p className="stat-text">Partner organizations supporting our mission</p>
+                            <div className="stat-number">$300k+</div>
+                            <p className="stat-text">Won in prizes</p>
+                        </div>
+
+                        <div className="stat-item">
+                            <div className="stat-number">11</div>
+                            <p className="stat-text">Hacker Houses hosted</p>
+                        </div>
+
+                        <div className="stat-item">
+                            <div className="stat-number">100+</div>
+                            <p className="stat-text">Hacker teams formed</p>
+                        </div>
+
+                        <div className="stat-item">
+                            <div className="stat-number">5,000+</div>
+                            <p className="stat-text">Event attendees</p>
                         </div>
                     </div>
                 </div>
