@@ -84,16 +84,21 @@ export default function ServiceCards() {
                 </div>
 
                 <div className="service-cards">
-                    {services.map((service) => (
+                    {services.map((service, index) => (
                         <div key={service.id} className="service-card">
                             <div className="service-card-content">
                                 <div className="service-number">{service.id}</div>
                                 <h3 className="service-title">{service.title}</h3>
-                                <p className="service-description">{service.desc}</p>
                             </div>
                             <div className="service-image-wrapper">
-                                <div className="service-image-placeholder">IMAGE</div>
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={`https://images.unsplash.com/photo-${index === 0 ? '1550745165-9bc0b252726f' : '1586717791821-3f44a563eb4c'}?auto=format&fit=crop&w=400&q=80`}
+                                    alt={service.title}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+                                />
                             </div>
+                            <p className="service-description">{service.desc}</p>
                         </div>
                     ))}
                 </div>

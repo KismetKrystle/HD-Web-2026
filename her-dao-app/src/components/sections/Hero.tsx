@@ -59,7 +59,7 @@ export default function Hero() {
         <section id="home" className="section hero" ref={container}>
             {/* Background Video */}
             <video className="hero-video" autoPlay loop muted playsInline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-deep-blue-matrix-digital-data-screen-13317-large.mp4" type="video/mp4" />
             </video>
 
             {/* Gradient Overlay */}
