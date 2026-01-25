@@ -24,7 +24,13 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container-navbar">
                 <Link href="/" className="brand">
-                    <div className="logo-text">H.E.R. DAO ©</div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        src="https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
+                        alt="H.E.R. DAO"
+                        className="navbar-logo"
+                        style={{ height: '32px', width: 'auto' }}
+                    />
                 </Link>
                 <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
                     <Link href="#home" className="nav-link" onClick={() => setMenuOpen(false)}>HOME</Link>

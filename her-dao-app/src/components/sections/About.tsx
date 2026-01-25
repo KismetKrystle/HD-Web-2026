@@ -52,12 +52,15 @@ export default function About() {
         gsap.from(".partner-card", {
             scrollTrigger: {
                 trigger: ".partner-logos",
-                start: "top 80%",
+                start: "top 95%", // Trigger even earlier
+                toggleActions: "play none none none"
             },
             opacity: 0,
-            y: 20,
+            y: 30,
             stagger: 0.1,
-            duration: 0.6
+            duration: 1,
+            ease: "power2.out",
+            clearProps: "all"
         });
 
     }, { scope: container })
@@ -102,9 +105,21 @@ export default function About() {
 
                     {/* Partner Logos */}
                     <div className="partner-logos">
-                        {[1, 2, 3, 4, 5].map((i) => (
+                        {[
+                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332658/Polkadot-Logo_pu7lrz.png",
+                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/Thirdweb-Logo-Transparent-Black_ofif1e.webp",
+                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/celo_ryerov.png",
+                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/stellar_logo_gljjv1.png",
+                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/starknetlogo_bfigou.png"
+                        ].map((url, i) => (
                             <div key={i} className="partner-card">
-                                <div className="partner-placeholder">PARTNER {i}</div>
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={url}
+                                    alt={`Partner ${i + 1}`}
+                                    className="partner-logo-img"
+                                    style={{ maxWidth: '100%', maxHeight: '40px', objectFit: 'contain', opacity: 1 }}
+                                />
                             </div>
                         ))}
                     </div>

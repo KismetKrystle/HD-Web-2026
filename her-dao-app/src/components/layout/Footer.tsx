@@ -28,7 +28,16 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-bottom">
-                        <p>&copy; 2025 H.E.R. DAO. All rights reserved.</p>
+                        <div className="footer-brand">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src="https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
+                                alt="H.E.R. DAO"
+                                className="footer-logo"
+                                style={{ height: '24px', marginBottom: '12px', opacity: 0.8 }}
+                            />
+                            <p>&copy; 2026 H.E.R. DAO. All rights reserved.</p>
+                        </div>
                     </div>
                 </div>
             </div>
