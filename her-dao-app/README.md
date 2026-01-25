@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# H.E.R. DAO Website
+
+The official website for H.E.R. DAO - Building the Future of Web3 by empowering women in blockchain through infrastructure, education, and ecosystems.
+
+## About H.E.R. DAO
+
+H.E.R. DAO is committed to increasing diversity and inclusion in Web3, creating a sustainable pipeline for women developers and fostering innovation through education and community.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Modules with custom design system
+- **Animations**: GSAP with ScrollTrigger
+- **Font**: Inter Tight (Google Fonts)
+- **Deployment**: Vercel
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── globals.css        # Global styles and design tokens
+│   ├── layout.tsx         # Root layout with metadata
+│   └── page.tsx           # Home page
+├── components/
+│   ├── layout/            # Layout components
+│   │   ├── Navbar.tsx     # Navigation bar
+│   │   └── Footer.tsx     # Footer with social links
+│   └── sections/          # Page sections
+│       ├── Hero.tsx       # Hero section with animated background
+│       ├── About.tsx      # About section with partner logos
+│       ├── ServiceCards.tsx    # Products/Services cards
+│       ├── FeaturedProjects.tsx # Featured products showcase
+│       └── Achievement.tsx     # Statistics and achievements
+```
+
+## Key Features
+
+- **Animated Hero Section**: Dynamic GIF background with GSAP animations
+- **Responsive Design**: Mobile-first approach with optimized layouts
+- **Smooth Scrolling**: GSAP ScrollTrigger for scroll-based animations
+- **Social Integration**: Direct links to X, Telegram, GitHub, and Instagram
+- **Performance Optimized**: Next.js Image optimization and lazy loading
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project uses a custom design system with:
 
-## Learn More
+- **Colors**: Purple (#8B5CF6), Pink (#EC4899), Blue (#6366F1)
+- **Typography**: Inter Tight with weights 400-900
+- **Spacing**: Consistent spacing scale (8px, 16px, 24px, 48px, 96px, 144px)
+- **Components**: Reusable button, card, and section components
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site is deployed on Vercel. Any push to the `main` branch triggers an automatic deployment.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo)
 
-## Deploy on Vercel
+## Connect With Us
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Website**: [herdao.org](https://herdao.org)
+- **X (Twitter)**: [@_HerDAO](https://x.com/_HerDAO)
+- **Telegram**: [t.me/herdao](https://t.me/herdao)
+- **GitHub**: [H-E-R-DAO](https://github.com/H-E-R-DAO)
+- **Instagram**: [@h.e.r.dao](https://instagram.com/h.e.r.dao)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+© 2026 H.E.R. DAO. All rights reserved.
