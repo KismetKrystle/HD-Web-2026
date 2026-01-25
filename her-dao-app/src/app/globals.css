@@ -439,6 +439,8 @@ body {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: var(--text-dark);
+  padding-right: 4px;
+  /* Fix for cut-off letters */
 }
 
 .section-title.dark {
@@ -613,37 +615,37 @@ body {
 /* ============================================
    PRODUCTS SECTION 2 - Sticky Scroll Cards
    ============================================ */
-.featured-projects {
+.featured-products {
   background: var(--off-white);
   padding: 120px 0 200px;
 }
 
-.project-list {
+.product-list {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.project-card {
+.product-card {
   position: sticky;
   top: 120px;
   margin-bottom: 24px;
 }
 
-.project-card:nth-child(1) {
+.product-card:nth-child(1) {
   z-index: 1;
 }
 
-.project-card:nth-child(2) {
+.product-card:nth-child(2) {
   z-index: 2;
 }
 
-.project-card:nth-child(3) {
+.product-card:nth-child(3) {
   z-index: 3;
 }
 
-.project-card-inner {
+.product-card-inner {
   background: var(--black);
   border-radius: 16px;
   padding: 24px;
@@ -653,12 +655,12 @@ body {
   transition: all 0.4s ease;
 }
 
-.project-card:hover .project-card-inner {
+.product-card:hover .product-card-inner {
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
-.project-content {
+.product-content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -666,7 +668,7 @@ body {
   padding: 20px;
 }
 
-.project-badges {
+.product-badges {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -684,27 +686,27 @@ body {
   letter-spacing: 1px;
 }
 
-.project-title {
+.product-title {
   font-size: 48px;
   font-weight: var(--font-weight-bold);
   color: var(--white);
   line-height: 1.2;
 }
 
-.project-description {
+.product-description {
   font-size: 18px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.7);
   max-width: 500px;
 }
 
-.project-image {
+.product-image {
   width: 600px;
   height: 600px;
   flex-shrink: 0;
 }
 
-.project-image-placeholder {
+.product-image-placeholder {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.05);

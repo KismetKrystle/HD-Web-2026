@@ -23,10 +23,10 @@ export default function FeaturedProjects() {
             ease: "power2.out"
         });
 
-        // Project cards - Fade in (sticky effect is CSS)
-        gsap.from(".project-card", {
+        // Product cards - Fade in (sticky effect is CSS)
+        gsap.from(".product-card", {
             scrollTrigger: {
-                trigger: ".project-list",
+                trigger: ".product-list",
                 start: "top 70%",
             },
             opacity: 0,
@@ -37,7 +37,7 @@ export default function FeaturedProjects() {
         });
     }, { scope: container })
 
-    const projects = [
+    const products = [
         {
             title: "H.E.R. DAO Labs",
             desc: "Innovation hub for blockchain development and research.",
@@ -59,7 +59,7 @@ export default function FeaturedProjects() {
     ]
 
     return (
-        <section className="section featured-projects" ref={container}>
+        <section className="section featured-products" ref={container}>
             <div className="container">
                 <div className="section-header">
                     <div className="label-wrapper">
@@ -74,24 +74,24 @@ export default function FeaturedProjects() {
                     </div>
                 </div>
 
-                <div className="project-list">
-                    {projects.map((project, idx) => (
-                        <div key={idx} className="project-card">
-                            <div className="project-card-inner">
-                                <div className="project-content">
-                                    <div className="project-badges">
-                                        {project.badges.map((badge, bIdx) => (
+                <div className="product-list">
+                    {products.map((product, idx) => (
+                        <div key={idx} className="product-card">
+                            <div className="product-card-inner">
+                                <div className="product-content">
+                                    <div className="product-badges">
+                                        {product.badges.map((badge, bIdx) => (
                                             <span key={bIdx} className="badge">{badge}</span>
                                         ))}
                                     </div>
-                                    <h3 className="project-title">{project.title}</h3>
-                                    <p className="project-description">{project.desc}</p>
+                                    <h3 className="product-title">{product.title}</h3>
+                                    <p className="product-description">{product.desc}</p>
                                     <Link href="#" className="button-navbar dark">
-                                        <div>view project</div>
+                                        <div>view product</div>
                                     </Link>
                                 </div>
-                                <div className="project-image">
-                                    <div className="project-image-placeholder">PROJECT IMAGE</div>
+                                <div className="product-image">
+                                    <div className="product-image-placeholder">PRODUCT IMAGE</div>
                                 </div>
                             </div>
                         </div>
