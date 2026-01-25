@@ -43,7 +43,7 @@ export default function FeaturedProjects() {
             desc: "Innovation hub for blockchain development and research.",
             badges: ["Branding", "Platform"],
             zIndex: 3,
-            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg"
+            image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
         },
         {
             title: "Hero Network",
@@ -57,7 +57,7 @@ export default function FeaturedProjects() {
             desc: "Annual blockchain conference celebrating women in Web3.",
             badges: ["Event", "Community"],
             zIndex: 1,
-            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg"
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769339672/her-con-flyer_qahw3f.avif"
         }
     ]
 
