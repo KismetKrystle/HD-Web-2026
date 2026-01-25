@@ -317,8 +317,8 @@ body {
   gap: 12px;
   color: var(--accent-purple);
   text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 900;
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
 }
