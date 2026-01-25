@@ -131,7 +131,7 @@ export default function Hero() {
                         <div className="text-hero-bottom">
                             Building a sustainable pipeline for the next generation of women developers.
                         </div>
-                        <Link href="#contact" className="hero-cta">
+                        <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="hero-cta">
                             <span>LET’S TALK</span>
                             <div className="arrow-wrapper">
                                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
