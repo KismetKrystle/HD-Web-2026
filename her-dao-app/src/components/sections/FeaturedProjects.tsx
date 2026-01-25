@@ -42,19 +42,22 @@ export default function FeaturedProjects() {
             title: "H.E.R. DAO Labs",
             desc: "Innovation hub for blockchain development and research.",
             badges: ["Branding", "Platform"],
-            zIndex: 3
+            zIndex: 3,
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg"
         },
         {
             title: "Hero Network",
             desc: "Decentralized infrastructure platform empowering Web3 builders.",
             badges: ["Infrastructure", "Platform"],
-            zIndex: 2
+            zIndex: 2,
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg"
         },
         {
             title: "H.E.R. CON",
             desc: "Annual blockchain conference celebrating women in Web3.",
             badges: ["Event", "Community"],
-            zIndex: 1
+            zIndex: 1,
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg"
         }
     ]
 
@@ -86,12 +89,17 @@ export default function FeaturedProjects() {
                                     </div>
                                     <h3 className="product-title">{product.title}</h3>
                                     <p className="product-description">{product.desc}</p>
-                                    <Link href="#" className="button-navbar dark">
+                                    {/* <Link href="#" className="button-navbar dark">
                                         <div>view product</div>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                                 <div className="product-image">
-                                    <div className="product-image-placeholder">PRODUCT IMAGE</div>
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={product.image}
+                                        alt={product.title}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -45,27 +45,32 @@ export default function ServiceCards() {
         {
             id: "01",
             title: "Dev Camp",
-            desc: "Intensive developer training programs designed to accelerate blockchain skill development."
+            desc: "Intensive developer training programs designed to accelerate blockchain skill development.",
+            image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80"
         },
         {
             id: "02",
             title: "Web3 University",
-            desc: "Educational platform providing comprehensive Web3 courses and certifications."
+            desc: "Educational platform providing comprehensive Web3 courses and certifications.",
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769341349/web3_university_acynrm.png"
         },
         {
             id: "03",
             title: "Cyber Security",
-            desc: "Security audit and training services to protect blockchain infrastructure."
+            desc: "Security audit and training services to protect blockchain infrastructure.",
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769341331/her_dao_cyber_security_z2wp6t.png"
         },
         {
             id: "04",
             title: "DeFi",
-            desc: "Decentralized finance solutions and infrastructure for the future of money."
+            desc: "Decentralized finance solutions and infrastructure for the future of money.",
+            image: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=400&q=80"
         },
         {
             id: "05",
             title: "Content Creation",
-            desc: "Media and storytelling studio amplifying women's voices in blockchain."
+            desc: "Media and storytelling studio amplifying women's voices in blockchain.",
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769341270/her_dao_content_creation_bssyp9.png"
         }
     ]
 
@@ -92,7 +97,7 @@ export default function ServiceCards() {
                             <div className="service-image-wrapper">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src={`https://images.unsplash.com/photo-${index === 0 ? '1550745165-9bc0b252726f' : '1586717791821-3f44a563eb4c'}?auto=format&fit=crop&w=400&q=80`}
+                                    src={service.image}
                                     alt={service.title}
                                     style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
                                 />
