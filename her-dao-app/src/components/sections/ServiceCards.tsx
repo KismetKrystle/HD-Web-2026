@@ -23,7 +23,6 @@ export default function ServiceCards() {
         });
 
         // Service cards - Staggered reveal
-        // Service cards - Staggered reveal
         gsap.fromTo(".service-card",
             { opacity: 0, y: 50 }, // Start state
             {
@@ -79,7 +78,7 @@ export default function ServiceCards() {
                         <span className="label-text">PRODUCTS</span>
                     </div>
                     <div className="overflow-hidden">
-                        <h2 className="section-title">FULL-SPECTRUM<br />CREATIVE</h2>
+                        <h2 className="section-title">FULL-SPECTRUM<br />DEVELOPMENT</h2>
                     </div>
                 </div>
 

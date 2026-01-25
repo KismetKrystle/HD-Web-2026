@@ -64,12 +64,12 @@ export default function FeaturedProjects() {
                 <div className="section-header">
                     <div className="label-wrapper">
                         <span className="label-dot"></span>
-                        <span className="label-text">featured projects</span>
+                        <span className="label-text">featured products</span>
                     </div>
                     <div className="overflow-hidden">
                         <h2 className="section-title">
                             Featured<br />
-                            <span className="title-accent">Projects</span>
+                            <span className="title-accent">Products</span>
                         </h2>
                     </div>
                 </div>
