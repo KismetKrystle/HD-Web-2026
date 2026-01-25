@@ -21,10 +21,10 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-social">
-                        <Link href="#" className="social-link">Twitter</Link>
-                        <Link href="#" className="social-link">Telegram</Link>
-                        <Link href="#" className="social-link">GitHub</Link>
-                        <Link href="#" className="social-link">Instagram</Link>
+                        <Link href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</Link>
+                        <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="social-link">Telegram</Link>
+                        <Link href="https://github.com/H-E-R-DAO" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</Link>
+                        <Link href="https://www.instagram.com/h.e.r.dao" target="_blank" rel="noopener noreferrer" className="social-link">Instagram</Link>
                     </div>
 
                     <div className="footer-bottom">
