@@ -145,9 +145,12 @@ export default function Hero() {
 
             <div className="overlay-hero"></div>
             <div className="image-hero-video-wrap">
-                <video autoPlay loop muted playsInline className="image-hero">
-                    <source src="https://res.cloudinary.com/dsoojlgg1/video/upload/v1769280899/womentech_dwa56s.mp4" type="video/mp4" />
-                </video>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src="https://res.cloudinary.com/dsoojlgg1/image/upload/v1769361079/her_dao_-hero_section_1_huvrn2.gif"
+                    alt="Hero background"
+                    className="image-hero"
+                />
             </div>
         </section>
     )
