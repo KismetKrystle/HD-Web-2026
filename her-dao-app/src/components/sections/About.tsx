@@ -100,7 +100,7 @@ export default function About() {
                     {/* Description */}
                     <div className="about-description">
                         <p>H.E.R. DAO is committed to increasing diversity and inclusion in Web3, creating a sustainable pipeline for women developers and fostering innovation through education and community.</p>
-                        <Link href="#" className="text-link">Read more →</Link>
+                        <Link href="#achievement" className="text-link">Read more →</Link>
                     </div>
 
                     {/* Partner Logos */}

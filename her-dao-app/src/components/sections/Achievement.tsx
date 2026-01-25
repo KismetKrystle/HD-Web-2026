@@ -77,7 +77,7 @@ export default function Achievement() {
     }, { scope: container })
 
     return (
-        <section className="section achievement" ref={container}>
+        <section id="achievement" className="section achievement" ref={container}>
             <div className="container">
                 <div className="achievement-content">
                     <div className="section-header left">
