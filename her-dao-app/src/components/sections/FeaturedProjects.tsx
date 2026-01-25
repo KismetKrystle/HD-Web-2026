@@ -68,7 +68,7 @@ export default function FeaturedProjects() {
                     </div>
                     <div className="overflow-hidden">
                         <h2 className="section-title">
-                            2025 — Featured<br />
+                            Featured<br />
                             <span className="title-accent">Projects</span>
                         </h2>
                     </div>
