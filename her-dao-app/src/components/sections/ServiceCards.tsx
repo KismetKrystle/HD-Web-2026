@@ -64,7 +64,7 @@ export default function ServiceCards() {
             id: "04",
             title: "DeFi",
             desc: "Decentralized finance solutions and infrastructure for the future of money.",
-            image: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=400&q=80"
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769342056/herdao_defi_nnfccj.png"
         },
         {
             id: "05",
