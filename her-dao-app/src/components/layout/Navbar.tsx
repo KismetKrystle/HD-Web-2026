@@ -37,7 +37,7 @@ export default function Navbar() {
                     <Link href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>ABOUT</Link>
                     <Link href="#products" className="nav-link" onClick={() => setMenuOpen(false)}>PRODUCTS</Link>
                 </div>
-                <Link href="#contact" className="button-navbar">
+                <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="button-navbar">
                     <div>let's talk</div>
                 </Link>
                 <div

@@ -5,7 +5,9 @@ export default function Footer() {
         <footer id="contact" className="footer">
             <div className="footer-container">
                 <div className="footer-cta">
-                    <h2 className="footer-title">Let's Talk</h2>
+                    <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h2 className="footer-title">Let's Talk</h2>
+                    </Link>
                 </div>
 
                 <div className="footer-content">
@@ -15,13 +17,13 @@ export default function Footer() {
                             <span className="info-value">hello@herdao.org</span>
                         </div>
                         <div className="info-group">
-                            <span className="info-label">Twitter:</span>
+                            <span className="info-label">X:</span>
                             <span className="info-value">@herdao</span>
                         </div>
                     </div>
 
                     <div className="footer-social">
-                        <Link href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</Link>
+                        <Link href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className="social-link">X</Link>
                         <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="social-link">Telegram</Link>
                         <Link href="https://github.com/H-E-R-DAO" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</Link>
                         <Link href="https://www.instagram.com/h.e.r.dao" target="_blank" rel="noopener noreferrer" className="social-link">Instagram</Link>
