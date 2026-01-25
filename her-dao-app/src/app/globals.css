@@ -103,7 +103,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 8px 40px;
   max-width: 1440px;
   margin: 0 auto;
 }
