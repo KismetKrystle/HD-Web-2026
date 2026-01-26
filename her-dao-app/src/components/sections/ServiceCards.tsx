@@ -90,10 +90,8 @@ export default function ServiceCards() {
                 <div className="service-cards">
                     {services.map((service, index) => (
                         <div key={service.id} className="service-card">
-                            <div className="service-card-content">
-                                <div className="service-number">{service.id}</div>
-                                <h3 className="service-title">{service.title}</h3>
-                            </div>
+                            <div className="service-number">{service.id}</div>
+                            <h3 className="service-title">{service.title}</h3>
                             <div className="service-image-wrapper">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img

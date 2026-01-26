@@ -82,12 +82,14 @@ export default function FeaturedProjects() {
                         <div key={idx} className="product-card">
                             <div className="product-card-inner">
                                 <div className="product-content">
-                                    <div className="product-badges">
-                                        {product.badges.map((badge, bIdx) => (
-                                            <span key={bIdx} className="badge">{badge}</span>
-                                        ))}
+                                    <div className="product-header">
+                                        <div className="product-badges">
+                                            {product.badges.map((badge, bIdx) => (
+                                                <span key={bIdx} className="badge">{badge}</span>
+                                            ))}
+                                        </div>
+                                        <h3 className="product-title">{product.title}</h3>
                                     </div>
-                                    <h3 className="product-title">{product.title}</h3>
                                     <p className="product-description">{product.desc}</p>
                                     {/* <Link href="#" className="button-navbar dark">
                                         <div>view product</div>
