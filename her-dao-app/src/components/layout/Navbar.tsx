@@ -38,7 +38,7 @@ export default function Navbar() {
                     <Link href="#products" className="nav-link" onClick={() => setMenuOpen(false)}>PRODUCTS</Link>
                 </div>
                 <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="button-navbar">
-                    <div>let's talk</div>
+                    <div>Join Us</div>
                 </Link>
                 <div
                     className={`menu-toggle ${menuOpen ? 'active' : ''}`}
