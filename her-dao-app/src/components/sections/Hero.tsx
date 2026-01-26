@@ -10,8 +10,11 @@ gsap.registerPlugin(useGSAP)
 export default function Hero() {
     const container = useRef(null)
 
-    // Force scroll to top on refresh
+    // Force scroll to top on refresh and prevent browser auto-restoration
     useEffect(() => {
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
         window.scrollTo(0, 0);
     }, []);
 

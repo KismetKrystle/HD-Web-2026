@@ -99,7 +99,7 @@ export default function ServiceCards() {
     }
 
     return (
-        <section id="products" className="section products-section" ref={container}>
+        <section id="services" className="section products-section" ref={container}>
             <div className="container">
                 <div className="section-header left">
                     <div className="label-wrapper">

@@ -37,6 +37,10 @@
   --space-lg: 48px;
   --space-xl: 96px;
   --space-2xl: 144px;
+
+  /* Hero Specific Spacing */
+  --hero-spacing-top: 60px;
+  --hero-spacing-bottom: 90px;
 }
 
 .color-purple {
@@ -282,7 +286,7 @@ a {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  padding: 10px 40px 80px;
+  padding: 80px 40px 80px;
   /* Reduced top padding further, increased bottom to shift everything up */
   display: flex;
   flex-direction: column;
@@ -293,6 +297,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: var(--hero-spacing-top);
 }
 
 .top-subtitle-hero {
@@ -317,7 +322,7 @@ a {
 .hero-text {
   font-size: clamp(60px, 15vw, 170px);
   font-weight: 900;
-  line-height: 0.85;
+  line-height: 0.8;
   letter-spacing: -0.05em;
   color: var(--white);
   text-transform: uppercase;
@@ -332,6 +337,7 @@ a {
   justify-content: space-between;
   /* Socials Left, Text Right */
   align-items: flex-end;
+  margin-top: var(--hero-spacing-bottom);
 }
 
 .social-wrapper-hero {
@@ -379,12 +385,12 @@ a {
 .hero-cta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   color: var(--accent-purple);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 900;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   transition: all 0.3s ease;
 }
 
@@ -399,21 +405,21 @@ a {
 }
 
 .overlay-hero {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 1;
 }
 
 .image-hero-video-wrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 0;
 }
 
@@ -430,6 +436,8 @@ a {
   background: var(--white);
   padding: 120px 0;
   position: relative;
+  scroll-margin-top: 60px;
+  z-index: 2;
 }
 
 .about-content {
@@ -597,6 +605,9 @@ a {
 .products-section {
   background: var(--black);
   color: var(--white);
+  scroll-margin-top: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .products-section .section-title {
@@ -613,6 +624,7 @@ a {
 
 .service-cards-mobile {
   display: none;
+  margin-top: 60px;
 }
 
 .service-cards-desktop .service-card {
@@ -697,6 +709,9 @@ a {
 .featured-products {
   background: var(--off-white);
   padding: 120px 0 200px;
+  scroll-margin-top: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .product-list {
@@ -812,6 +827,9 @@ a {
 .achievement {
   background: var(--white);
   padding: 120px 0;
+  scroll-margin-top: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .achievement-content {
@@ -866,6 +884,8 @@ a {
   background: var(--white);
   padding: 80px 0 40px;
   border-top: 1px solid #E5E5E5;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-container {
@@ -989,7 +1009,7 @@ a {
   }
 
   .nav-menu .nav-link {
-    font-size: clamp(60px, 15vw, 150px);
+    font-size: clamp(36px, 10vw, 60px);
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -0.05em;
@@ -1214,13 +1234,21 @@ a {
   }
 
   /* Hero Mobile Updates */
+  .wrapper-content-hero.home {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    justify-content: flex-start;
+    gap: 120px;
+  }
+
   .hero-bottom-row {
     display: flex;
     flex-direction: column-reverse;
     /* Reverted to reverse for wrap: Socials bottom, Text top */
     align-items: center;
     /* Center everything on mobile */
-    gap: 32px;
+    gap: 50px;
+    /* Increased gap to push socials down / text up */
   }
 
   .social-wrapper-hero {
@@ -1241,29 +1269,26 @@ a {
   .bottom-subtext-hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
+    text-align: right;
     width: 100%;
     gap: 16px;
   }
 
   .text-hero-bottom {
-    text-align: center;
+    text-align: right;
     font-size: 18px;
     max-width: 480px;
     line-height: 1.4;
   }
 
-  .top-subtitle-hero {
-    margin-top: 20px;
-  }
 
   .text-hero-top {
     font-size: 14px;
   }
 
   .hero-text {
-    font-size: clamp(52px, 15vw, 84px);
+    font-size: clamp(52px, 15vw, 110px) !important;
   }
 
   .top-subtitle-hero {
@@ -1276,9 +1301,9 @@ a {
     font-size: clamp(36px, 10vw, 60px);
   }
 
-  .hero-text {
+  /* .hero-text {
     font-size: clamp(48px, 12vw, 80px);
-  }
+  } */
 
   .hero-text.line-2 {
     padding-left: 40px;

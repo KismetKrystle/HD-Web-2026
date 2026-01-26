@@ -23,7 +23,7 @@ export default function Navbar() {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container-navbar">
-                <Link href="/" className="brand">
+                <Link href="#hero" className="brand">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
@@ -34,7 +34,7 @@ export default function Navbar() {
                 </Link>
                 <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
                     <Link href="#hero" className="nav-link" onClick={() => setMenuOpen(false)}>HOME</Link>
-                    <Link href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>ABOUT</Link>
+                    <a href="#achievement" className="nav-link" onClick={() => setMenuOpen(false)}>ACHIEVEMENTS</a>
                     <Link href="#products" className="nav-link" onClick={() => setMenuOpen(false)}>PRODUCTS</Link>
                 </div>
                 <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="button-navbar">

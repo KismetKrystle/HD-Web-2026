@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
     ]
 
     return (
-        <section className="section featured-products" ref={container}>
+        <section id="products" className="section featured-products" ref={container}>
             <div className="container">
                 <div className="section-header">
                     <div className="label-wrapper">
