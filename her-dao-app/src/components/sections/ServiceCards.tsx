@@ -1,14 +1,16 @@
 "use client"
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export default function ServiceCards() {
     const container = useRef(null)
+    const [activeSlide, setActiveSlide] = useState(0)
 
     useGSAP(() => {
         // Title animation
@@ -74,6 +76,14 @@ export default function ServiceCards() {
         }
     ]
 
+    const nextSlide = () => {
+        setActiveSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))
+    }
+
+    const prevSlide = () => {
+        setActiveSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1))
+    }
+
     return (
         <section id="products" className="section products-section" ref={container}>
             <div className="container">
@@ -89,7 +99,7 @@ export default function ServiceCards() {
 
                 <div className="service-cards">
                     {services.map((service, index) => (
-                        <div key={service.id} className="service-card">
+                        <div key={service.id} className={`service-card ${index === activeSlide ? 'active' : ''}`}>
                             <div className="service-number">{service.id}</div>
                             <h3 className="service-title">{service.title}</h3>
                             <div className="service-image-wrapper">
@@ -103,6 +113,16 @@ export default function ServiceCards() {
                             <p className="service-description">{service.desc}</p>
                         </div>
                     ))}
+                </div>
+
+                {/* Mobile Navigation */}
+                <div className="mobile-carousel-nav">
+                    <button onClick={prevSlide} className="nav-arrow prev">
+                        <ArrowLeft size={24} />
+                    </button>
+                    <button onClick={nextSlide} className="nav-arrow next">
+                        <ArrowRight size={24} />
+                    </button>
                 </div>
             </div>
         </section>

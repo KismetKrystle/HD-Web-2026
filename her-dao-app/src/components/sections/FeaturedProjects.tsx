@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
@@ -23,8 +24,8 @@ export default function FeaturedProjects() {
             ease: "power2.out"
         });
 
-        // Product cards - Fade in (sticky effect is CSS)
-        gsap.from(".product-card", {
+        // Product cards - Fade in (target inner content to avoid breaking sticky parent)
+        gsap.from(".product-card-inner", {
             scrollTrigger: {
                 trigger: ".product-list",
                 start: "top 70%",
@@ -33,7 +34,8 @@ export default function FeaturedProjects() {
             y: 80,
             stagger: 0.3,
             duration: 1,
-            ease: "power2.out"
+            ease: "power2.out",
+            clearProps: "all"
         });
     }, { scope: container })
 
@@ -71,8 +73,8 @@ export default function FeaturedProjects() {
                     </div>
                     <div className="overflow-hidden">
                         <h2 className="section-title">
-                            Featured<br />
-                            <span className="title-accent">Products</span>
+                            Empowering<br />
+                            <span className="title-accent">Ecosystems</span>
                         </h2>
                     </div>
                 </div>
@@ -91,9 +93,10 @@ export default function FeaturedProjects() {
                                         <h3 className="product-title">{product.title}</h3>
                                     </div>
                                     <p className="product-description">{product.desc}</p>
-                                    {/* <Link href="#" className="button-navbar dark">
-                                        <div>view product</div>
-                                    </Link> */}
+                                    <Link href="#" className="button-navbar dark view-project-btn">
+                                        <div>View Project</div>
+                                        <ArrowRight size={16} />
+                                    </Link>
                                 </div>
                                 <div className="product-image">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}

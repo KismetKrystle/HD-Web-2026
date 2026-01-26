@@ -106,6 +106,72 @@ body {
   padding: 8px 40px;
   max-width: 1440px;
   margin: 0 auto;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Utility Classes for Responsive Toggles */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: flex !important;
+}
+
+@media (max-width: 991px) {
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+
+
+/* Global Partners Marquee */
+.partner-marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.partner-logos-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  gap: 60px;
+}
+
+.partner-card {
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .brand {
@@ -216,12 +282,11 @@ body {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  padding: 60px 40px;
-  /* Reduced top/bottom padding */
+  padding: 10px 40px 80px;
+  /* Reduced top padding further, increased bottom to shift everything up */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* Better distribution for smaller elements */
 }
 
 .hero-top-row {
@@ -265,8 +330,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  /* Socials Left, Text Right */
   align-items: flex-end;
-  gap: 40px;
 }
 
 .social-wrapper-hero {
@@ -305,7 +370,7 @@ body {
 .text-hero-bottom {
   font-size: 18px;
   color: var(--white);
-  max-width: 450px;
+  max-width: 650px;
   text-align: right;
   line-height: 1.5;
   font-weight: 500;
@@ -598,6 +663,10 @@ body {
   border: 3px solid var(--white);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-carousel-nav {
+  display: none;
 }
 
 .service-image-placeholder {
@@ -898,36 +967,238 @@ body {
     padding-left: 60px;
   }
 
+  /* Service Cards Carousel - Mobile */
+  .service-cards {
+    position: relative;
+    min-height: 500px;
+    /* Ensure height for carousel */
+  }
+
   .service-card {
+    display: none;
+    /* Hide all by default on mobile */
     flex-direction: column;
     padding: 32px;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    min-height: 700px;
+    /* Enforce equal/min height for consistency */
+    justify-content: space-between;
+  }
+
+  .service-card.active {
+    display: flex;
+    /* Show only active card */
+  }
+
+  .service-number {
+    width: auto;
+    font-size: 24px;
+  }
+
+  .service-title {
+    width: auto;
+    font-size: 32px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .service-image-wrapper {
     width: 100%;
-    height: 240px;
+    height: auto;
+    aspect-ratio: 4/3;
   }
 
-  .project-card-inner {
-    flex-direction: column;
+  .service-description {
+    font-size: 18px;
+    text-align: center;
+    max-width: 100%;
   }
 
-  .project-image {
-    width: 100%;
-    height: 400px;
+  .mobile-carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
   }
 
-  .partner-logos {
-    grid-template-columns: repeat(3, 1fr);
+  .nav-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
+  .nav-arrow:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+  }
+
+  /* Featured Projects Mobile */
+  .product-list {
     gap: 40px;
+  }
+
+  .product-card {
+    position: sticky;
+    /* Re-enable sticky for scroll effect */
+    top: 100px;
+    margin-bottom: 80px;
+    /* Increase spacing */
+    z-index: 1;
+    /* Reset z-index management handled by inline styles/nth-child */
+  }
+
+  .product-card-inner {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px;
+  }
+
+  .product-content {
+    order: 1;
+    /* Content first */
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .product-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .product-badges {
+    order: 1;
+  }
+
+  .product-title {
+    order: 2;
+    font-size: 32px;
+  }
+
+  .product-description {
+    order: 3;
+    font-size: 18px;
+    align-self: flex-start;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  /* View Project Button */
+  .view-project-btn {
+    order: 4;
+    margin-top: 24px;
+    align-self: flex-start;
+    display: flex !important;
+    /* Force flex since Link might be inline */
+    gap: 8px;
+    align-items: center;
+    background: var(--black);
+    /* Ensure visibility */
+    color: var(--white);
+    padding: 12px 24px;
+  }
+
+  .product-image {
+    order: 5;
+    /* Image last */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    /* Square or customize */
+  }
+
+  /* Partners Marquee Mobile - Handled Globally now */
+  /* .partner-marquee styles removed to inherit global */
+
+  /* Achievements Mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .stat-item.large {
+    grid-column: span 2;
+  }
+
+  .stat-number {
+    font-size: 48px;
+  }
+
+  .stat-text {
+    font-size: 16px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
+  }
+
+  /* Hero Mobile Updates */
+  .hero-bottom-row {
+    display: flex;
+    flex-direction: column-reverse;
+    /* Reverted to reverse for wrap: Socials bottom, Text top */
+    align-items: center;
+    /* Center everything on mobile */
+    gap: 32px;
+  }
+
+  .social-wrapper-hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .bottom-subtext-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .text-hero-bottom {
+    text-align: center;
+    font-size: 18px;
+    max-width: 480px;
+    line-height: 1.4;
+  }
+
+  .top-subtitle-hero {
+    margin-top: 20px;
+  }
+
+  .text-hero-top {
+    font-size: 14px;
+  }
+
+  .hero-text {
+    font-size: clamp(52px, 15vw, 84px);
+  }
+
+  .top-subtitle-hero {
+    margin-top: 10px;
   }
 }
 

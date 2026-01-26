@@ -65,6 +65,14 @@ export default function About() {
 
     }, { scope: container })
 
+    const partners = [
+        "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332658/Polkadot-Logo_pu7lrz.png",
+        "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/Thirdweb-Logo-Transparent-Black_ofif1e.webp",
+        "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/celo_ryerov.png",
+        "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/stellar_logo_gljjv1.png",
+        "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/starknetlogo_bfigou.png"
+    ]
+
     return (
         <section id="about" className="section about-us" ref={container}>
             <div className="container">
@@ -103,25 +111,22 @@ export default function About() {
                         <Link href="#achievement" className="text-link">Read more →</Link>
                     </div>
 
-                    {/* Partner Logos */}
-                    <div className="partner-logos">
-                        {[
-                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332658/Polkadot-Logo_pu7lrz.png",
-                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/Thirdweb-Logo-Transparent-Black_ofif1e.webp",
-                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/celo_ryerov.png",
-                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/stellar_logo_gljjv1.png",
-                            "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332657/starknetlogo_bfigou.png"
-                        ].map((url, i) => (
-                            <div key={i} className="partner-card">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src={url}
-                                    alt={`Partner ${i + 1}`}
-                                    className="partner-logo-img"
-                                    style={{ maxWidth: '100%', maxHeight: '40px', objectFit: 'contain', opacity: 1 }}
-                                />
-                            </div>
-                        ))}
+                    {/* Partner Logos - Infinite Marquee */}
+                    <div className="partner-marquee">
+                        <div className="partner-logos-track">
+                            {/* Duplicate logos for infinite loop */}
+                            {[...partners, ...partners].map((url, i) => (
+                                <div key={i} className="partner-card">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={url}
+                                        alt={`Partner ${i + 1}`}
+                                        className="partner-logo-img"
+                                        style={{ maxWidth: '100%', maxHeight: '40px', objectFit: 'contain', opacity: 1 }}
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
