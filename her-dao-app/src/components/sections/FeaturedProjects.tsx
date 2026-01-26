@@ -93,10 +93,10 @@ export default function FeaturedProjects() {
                                         <h3 className="product-title">{product.title}</h3>
                                     </div>
                                     <p className="product-description">{product.desc}</p>
-                                    <Link href="#" className="button-navbar dark view-project-btn">
+                                    {/* <Link href="#" className="button-navbar dark view-project-btn">
                                         <div>View Project</div>
                                         <ArrowRight size={16} />
-                                    </Link>
+                                    </Link> */}
                                 </div>
                                 <div className="product-image">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}

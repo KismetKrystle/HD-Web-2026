@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    H.E.R. DAO - MAIN STYLES
    Light theme with dark cards
    ============================================ */
@@ -106,72 +106,6 @@ body {
   padding: 8px 40px;
   max-width: 1440px;
   margin: 0 auto;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html,
-body {
-  width: 100%;
-  position: relative;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Utility Classes for Responsive Toggles */
-.mobile-only {
-  display: none !important;
-}
-
-.desktop-only {
-  display: flex !important;
-}
-
-@media (max-width: 991px) {
-  .mobile-only {
-    display: flex !important;
-  }
-
-  .desktop-only {
-    display: none !important;
-  }
-}
-
-
-
-/* Global Partners Marquee */
-.partner-marquee {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.partner-logos-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 40s linear infinite;
-  gap: 60px;
-}
-
-.partner-card {
-  min-width: 150px;
-  flex-shrink: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 .brand {
@@ -282,11 +216,12 @@ a {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  padding: 10px 40px 80px;
-  /* Reduced top padding further, increased bottom to shift everything up */
+  padding: 60px 40px;
+  /* Reduced top/bottom padding */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  /* Better distribution for smaller elements */
 }
 
 .hero-top-row {
@@ -330,8 +265,8 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* Socials Left, Text Right */
   align-items: flex-end;
+  gap: 40px;
 }
 
 .social-wrapper-hero {
@@ -370,7 +305,7 @@ a {
 .text-hero-bottom {
   font-size: 18px;
   color: var(--white);
-  max-width: 650px;
+  max-width: 450px;
   text-align: right;
   line-height: 1.5;
   font-weight: 500;
@@ -603,19 +538,14 @@ a {
   color: var(--white);
 }
 
-/* DESKTOP VIEW */
-.service-cards-desktop {
+.service-cards {
   display: flex;
   flex-direction: column;
   gap: 24px;
   margin-top: 60px;
 }
 
-.service-cards-mobile {
-  display: none;
-}
-
-.service-cards-desktop .service-card {
+.service-card {
   background: var(--white);
   border-radius: 24px;
   padding: 40px;
@@ -626,21 +556,22 @@ a {
   transition: all 0.4s ease;
 }
 
-.service-cards-desktop .service-card:hover {
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
 }
 
-.service-cards-desktop .service-number {
+.service-number {
   font-size: 30px;
   font-weight: 700;
   color: #FF4D00;
+  /* Orange-red from image */
   line-height: 1;
   flex-shrink: 0;
   width: 60px;
 }
 
-.service-cards-desktop .service-title {
+.service-title {
   font-size: 48px;
   font-weight: 700;
   color: var(--black);
@@ -651,7 +582,7 @@ a {
   width: 480px;
 }
 
-.service-cards-desktop .service-description {
+.service-description {
   font-size: 22px;
   line-height: 1.6;
   color: var(--text-dark);
@@ -660,21 +591,13 @@ a {
   min-width: 0;
 }
 
-.service-cards-desktop .service-image-wrapper {
+.service-image-wrapper {
   width: 280px;
   height: 200px;
   flex-shrink: 0;
   border: 3px solid var(--white);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.service-cards-desktop .service-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .service-image-placeholder {
@@ -964,310 +887,47 @@ a {
   }
 
   .nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--off-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(-20px);
-  }
-
-  .nav-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .nav-menu .nav-link {
-    font-size: clamp(60px, 15vw, 150px);
-    font-weight: 900;
-    line-height: 0.9;
-    letter-spacing: -0.05em;
+    display: none;
   }
 
   .menu-toggle {
     display: flex;
-    z-index: 1001;
-    /* Stay above the menu overlay */
-  }
-
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
 
   .hero-text.line-2 {
     padding-left: 60px;
   }
 
-  /* MOBILE VIEW */
-  .service-cards-desktop {
-    display: none;
-  }
-
-  .service-cards-mobile {
-    display: block;
-    position: relative;
-    min-height: 500px;
-  }
-
-  .service-cards-mobile .service-card {
-    display: none;
+  .service-card {
     flex-direction: column;
     padding: 32px;
-    align-items: center;
-    text-align: center;
-    gap: 24px;
-    min-height: auto;
-    justify-content: flex-start;
-    background: var(--white);
-    border-radius: 24px;
-  }
-
-  .service-cards-mobile .service-card.active {
-    display: flex;
-  }
-
-  .service-card-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .service-number {
-    width: auto;
-    font-size: 24px;
-    font-weight: 700;
-    color: #FF4D00;
-  }
-
-  .service-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--black);
-    text-align: left;
   }
 
   .service-image-wrapper {
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: 1/1;
-    border: 3px solid var(--white);
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 240px;
   }
 
-  .service-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  .service-card:nth-child(1) .service-card-img {
-    object-fit: cover;
-  }
-
-  .service-description {
-    font-size: 18px;
-    color: var(--text-dark);
-    text-align: center;
-    max-width: 100%;
-    line-height: 1.6;
-  }
-
-  .mobile-carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 20px;
-  }
-
-  .nav-arrow {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--black);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .nav-arrow:hover {
-    background: var(--accent);
-    transform: scale(1.1);
-  }
-
-  /* Featured Projects Mobile */
-  .product-list {
-    gap: 40px;
-  }
-
-  .product-card {
-    position: sticky;
-    /* Re-enable sticky for scroll effect */
-    top: 100px;
-    margin-bottom: 80px;
-    /* Increase spacing */
-    z-index: 1;
-    /* Reset z-index management handled by inline styles/nth-child */
-  }
-
-  .product-card-inner {
+  .project-card-inner {
     flex-direction: column;
-    gap: 32px;
-    padding: 24px;
   }
 
-  .product-content {
-    order: 1;
-    /* Content first */
-    padding: 0;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .product-header {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .product-badges {
-    order: 1;
-  }
-
-  .product-title {
-    order: 2;
-    font-size: 32px;
-  }
-
-  .product-description {
-    order: 3;
-    font-size: 18px;
-    align-self: flex-start;
-    max-width: 100%;
-    margin-top: 16px;
-  }
-
-  .product-image {
-    order: 5;
-    /* Image last */
+  .project-image {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    /* Square or customize */
+    height: 400px;
   }
 
-  /* Partners Marquee Mobile - Handled Globally now */
-  /* .partner-marquee styles removed to inherit global */
+  .partner-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-  /* Achievements Mobile */
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .stat-item.large {
-    grid-column: span 2;
-  }
-
-  .stat-number {
-    font-size: 48px;
-  }
-
-  .stat-text {
-    font-size: 16px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
-  }
-
-  /* Hero Mobile Updates */
-  .hero-bottom-row {
-    display: flex;
-    flex-direction: column-reverse;
-    /* Reverted to reverse for wrap: Socials bottom, Text top */
-    align-items: center;
-    /* Center everything on mobile */
-    gap: 32px;
-  }
-
-  .social-wrapper-hero {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .hero-cta {
-    font-size: 16px;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-
-  .bottom-subtext-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    gap: 16px;
-  }
-
-  .text-hero-bottom {
-    text-align: center;
-    font-size: 18px;
-    max-width: 480px;
-    line-height: 1.4;
-  }
-
-  .top-subtitle-hero {
-    margin-top: 20px;
-  }
-
-  .text-hero-top {
-    font-size: 14px;
-  }
-
-  .hero-text {
-    font-size: clamp(52px, 15vw, 84px);
-  }
-
-  .top-subtitle-hero {
-    margin-top: 10px;
   }
 }
 

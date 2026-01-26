@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Link from 'next/link'
@@ -9,6 +9,11 @@ gsap.registerPlugin(useGSAP)
 
 export default function Hero() {
     const container = useRef(null)
+
+    // Force scroll to top on refresh
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useGSAP(() => {
         const tl = gsap.timeline({

@@ -1,16 +1,14 @@
-"use client"
+﻿"use client"
 
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export default function ServiceCards() {
     const container = useRef(null)
-    const [activeSlide, setActiveSlide] = useState(0)
 
     useGSAP(() => {
         // Title animation
@@ -24,9 +22,9 @@ export default function ServiceCards() {
             ease: "power2.out"
         });
 
-        // DESKTOP: Service cards reveal
-        gsap.fromTo(".service-cards-desktop .service-card",
-            { opacity: 0, y: 50 },
+        // Service cards - Staggered reveal
+        gsap.fromTo(".service-card",
+            { opacity: 0, y: 50 }, // Start state
             {
                 opacity: 1,
                 y: 0,
@@ -34,23 +32,9 @@ export default function ServiceCards() {
                 duration: 0.8,
                 ease: "power2.out",
                 scrollTrigger: {
-                    trigger: ".service-cards-desktop",
-                    start: "top 80%",
-                }
-            }
-        );
-
-        // MOBILE: Service cards reveal
-        gsap.fromTo(".service-cards-mobile .service-card",
-            { opacity: 0, y: 30 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: ".service-cards-mobile",
-                    start: "top 85%",
+                    trigger: ".service-cards",
+                    start: "top 85%", // Trigger when top of container hits 85% of viewport height
+                    toggleActions: "play none none reverse" // Re-plays if you scroll back up
                 }
             }
         );
@@ -90,14 +74,6 @@ export default function ServiceCards() {
         }
     ]
 
-    const nextSlide = () => {
-        setActiveSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1))
-    }
-
-    const prevSlide = () => {
-        setActiveSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1))
-    }
-
     return (
         <section id="products" className="section products-section" ref={container}>
             <div className="container">
@@ -111,9 +87,8 @@ export default function ServiceCards() {
                     </div>
                 </div>
 
-                {/* DESKTOP BLOCK: List view */}
-                <div className="service-cards-desktop">
-                    {services.map((service) => (
+                <div className="service-cards">
+                    {services.map((service, index) => (
                         <div key={service.id} className="service-card">
                             <div className="service-number">{service.id}</div>
                             <h3 className="service-title">{service.title}</h3>
@@ -122,42 +97,12 @@ export default function ServiceCards() {
                                 <img
                                     src={service.image}
                                     alt={service.title}
-                                    className="service-card-img"
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
                                 />
                             </div>
                             <p className="service-description">{service.desc}</p>
                         </div>
                     ))}
-                </div>
-
-                {/* MOBILE BLOCK: Carousel view */}
-                <div className="service-cards-mobile">
-                    {services.map((service, index) => (
-                        <div key={service.id} className={`service-card ${index === activeSlide ? 'active' : ''}`}>
-                            <div className="service-card-header">
-                                <div className="service-number">{service.id}</div>
-                                <h3 className="service-title">{service.title}</h3>
-                            </div>
-                            <div className="service-image-wrapper">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="service-card-img"
-                                />
-                            </div>
-                            <p className="service-description">{service.desc}</p>
-                        </div>
-                    ))}
-
-                    <div className="mobile-carousel-nav">
-                        <button onClick={prevSlide} className="nav-arrow prev" aria-label="Previous service">
-                            <ArrowLeft size={24} />
-                        </button>
-                        <button onClick={nextSlide} className="nav-arrow next" aria-label="Next service">
-                            <ArrowRight size={24} />
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>

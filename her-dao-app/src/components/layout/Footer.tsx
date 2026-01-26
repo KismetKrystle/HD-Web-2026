@@ -14,11 +14,7 @@ export default function Footer() {
                     <div className="footer-info">
                         <div className="info-group">
                             <span className="info-label">Email:</span>
-                            <span className="info-value">hello@herdao.org</span>
-                        </div>
-                        <div className="info-group">
-                            <span className="info-label">X:</span>
-                            <span className="info-value">@herdao</span>
+                            <span className="info-value">contact@her-dao.xyz</span>
                         </div>
                     </div>
 
