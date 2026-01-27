@@ -1193,8 +1193,8 @@ a {
   .product-card {
     position: sticky;
     /* Re-enable sticky for scroll effect */
-    top: 180px;
-    margin-bottom: 200px;
+    top: 130px;
+    margin-bottom: 100px;
     /* Increase spacing */
     z-index: 1;
     /* Reset z-index management handled by inline styles/nth-child */
@@ -1204,7 +1204,7 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    min-height: 500px;
+    min-height: 600px;
     justify-content: flex-start;
   }
 
