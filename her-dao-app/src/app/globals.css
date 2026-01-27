@@ -1193,7 +1193,7 @@ a {
   .product-card {
     position: sticky;
     /* Re-enable sticky for scroll effect */
-    top: 120px;
+    top: 150px;
     margin-bottom: 200px;
     /* Increase spacing */
     z-index: 1;
