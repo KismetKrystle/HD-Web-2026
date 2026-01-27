@@ -1242,7 +1242,7 @@ a {
     padding-top: 30px;
     padding-bottom: 60px;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 10px;
   }
 
   .hero-bottom-row {
@@ -1251,7 +1251,7 @@ a {
     /* Reverted to reverse for wrap: Socials bottom, Text top */
     align-items: center;
     /* Center everything on mobile */
-    gap: 20px;
+    gap: 50px;
     /* Increased gap to push socials down / text up */
   }
 
@@ -1288,7 +1288,7 @@ a {
 
 
   .text-hero-top {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .hero-text {
