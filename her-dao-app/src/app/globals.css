@@ -1193,7 +1193,7 @@ a {
   .product-card {
     position: sticky;
     /* Re-enable sticky for scroll effect */
-    top: 100px;
+    top: 120px;
     margin-bottom: 400px;
     /* Increase spacing */
     z-index: 1;
@@ -1232,6 +1232,11 @@ a {
   .product-title {
     order: 2;
     font-size: 32px;
+    line-height: 1.2;
+    min-height: 78px;
+    /* Force 2 lines of space to ensure alignment below */
+    display: flex;
+    align-items: flex-end;
   }
 
   .product-description {
@@ -1240,7 +1245,6 @@ a {
     align-self: flex-start;
     max-width: 100%;
     margin-top: 16px;
-    max-width: 100%;
   }
 
   .product-image {
