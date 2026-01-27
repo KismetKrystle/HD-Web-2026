@@ -83,9 +83,7 @@ export default function Hero() {
                 <div className="hero-top-row">
                     <div className="top-subtitle-hero overflow-hidden">
                         <div className="text-hero-top">
-                            <span className="color-purple">Infrastructure</span> ·
-                            <span className="color-pink">Education</span> ·
-                            <span className="color-blue">Ecosystems</span>
+                            <span className="color-purple">Infrastructure</span> <span className="color-white font-black">·</span> <span className="color-pink">Education</span> <span className="color-white font-black">·</span> <span className="color-blue">Ecosystems</span>
                         </div>
                     </div>
                 </div>

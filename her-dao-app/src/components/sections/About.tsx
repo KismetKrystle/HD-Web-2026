@@ -94,20 +94,17 @@ export default function About() {
                         {/* Title Lines */}
                         <div className="title-wrapper">
                             <div className="overflow-hidden">
-                                <h2 className="section-title">Empowering Women</h2>
+                                <h2 className="section-title">Empowering Builders</h2>
                             </div>
                             <div className="overflow-hidden">
-                                <h2 className="section-title">In Blockchain</h2>
-                            </div>
-                            <div className="overflow-hidden">
-                                <h2 className="section-title">Building Tomorrow</h2>
+                                <h2 className="section-title">In Emerging Tech</h2>
                             </div>
                         </div>
                     </div>
 
                     {/* Description */}
                     <div className="about-description">
-                        <p>H.E.R. DAO is committed to increasing diversity and inclusion in Web3, creating a sustainable pipeline for women developers and fostering innovation through education and community.</p>
+                        <p>H.E.R. DAO is committed to increasing diversity and inclusion in Web3, creating a sustainable pipeline for diverse developers and fostering innovation through education and community.</p>
                         <Link href="#achievement" className="text-link">Read more →</Link>
                     </div>
 

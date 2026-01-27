@@ -9,9 +9,9 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   title: 'H.E.R. DAO - Building the Future of Web3',
-  description: 'Empowering women in blockchain through infrastructure, education, and ecosystems for the next generation.',
+  description: 'Empowering diverse builders in blockchain through infrastructure, education, and ecosystems for the next generation.',
   icons: {
-    icon: 'https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png',
+    icon: 'https://res.cloudinary.com/dsoojlgg1/image/upload/v1769525933/her_dao-logo_-_black_-_light_mode_-_circle_c1rx6x.svg',
   },
 }
 

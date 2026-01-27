@@ -87,7 +87,7 @@ export default function Achievement() {
                     <div className="section-header left">
                         <div className="label-wrapper">
                             <span className="label-dot"></span>
-                            <span className="label-text">achievement</span>
+                            <span className="label-text">achievements</span>
                         </div>
                         <div className="overflow-hidden">
                             <h2 className="section-title">Beyond Influence</h2>
@@ -105,7 +105,7 @@ export default function Achievement() {
 
                         <div className="stat-item">
                             <div className="stat-number">20+</div>
-                            <p className="stat-text">Hackathons organized</p>
+                            <p className="stat-text">Hackathons</p>
                         </div>
 
                         <div className="stat-item">
@@ -114,18 +114,18 @@ export default function Achievement() {
                         </div>
 
                         <div className="stat-item">
-                            <div className="stat-number">11</div>
-                            <p className="stat-text">Hacker Houses hosted</p>
+                            <div className="stat-number">10+</div>
+                            <p className="stat-text">Hacker Houses</p>
                         </div>
 
                         <div className="stat-item">
                             <div className="stat-number">100+</div>
-                            <p className="stat-text">Hacker teams formed</p>
+                            <p className="stat-text">Hacker teams</p>
                         </div>
 
                         <div className="stat-item">
-                            <div className="stat-number">5,000+</div>
-                            <p className="stat-text">Event attendees</p>
+                            <div className="stat-number">6,000+</div>
+                            <p className="stat-text">Attendees</p>
                         </div>
                     </div>
                 </div>

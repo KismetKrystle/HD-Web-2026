@@ -33,7 +33,7 @@ export default function Navbar() {
                     />
                 </Link>
                 <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-                    <Link href="#hero" className="nav-link" onClick={() => setMenuOpen(false)}>HOME</Link>
+                    <a href="#hero" className="nav-link" onClick={() => setMenuOpen(false)}>HOME</a>
                     <a href="#achievement" className="nav-link" onClick={() => setMenuOpen(false)}>ACHIEVEMENTS</a>
                     <Link href="#products" className="nav-link" onClick={() => setMenuOpen(false)}>PRODUCTS</Link>
                 </div>

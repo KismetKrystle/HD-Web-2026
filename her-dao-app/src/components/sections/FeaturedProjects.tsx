@@ -41,18 +41,19 @@ export default function FeaturedProjects() {
 
     const products = [
         {
+            title: "Herō Network",
+            desc: "Decentralized infrastructure platform empowering Web3 builders.",
+            badges: ["Infrastructure", "Platform"],
+            zIndex: 2,
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg",
+            link: "https://heronetwork.xyz"
+        },
+        {
             title: "H.E.R. DAO Labs",
             desc: "Innovation hub for blockchain development and research.",
             badges: ["Development", "Incubator"],
             zIndex: 3,
             image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            title: "Herō Network",
-            desc: "Decentralized infrastructure platform empowering Web3 builders.",
-            badges: ["Infrastructure", "Platform"],
-            zIndex: 2,
-            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg"
         },
         {
             title: "H.E.R. CON",
@@ -73,8 +74,8 @@ export default function FeaturedProjects() {
                     </div>
                     <div className="overflow-hidden">
                         <h2 className="section-title">
-                            Empowering<br />
-                            <span className="title-accent">Ecosystems</span>
+                            Featured<br />
+                            <span className="title-accent">Products</span>
                         </h2>
                     </div>
                 </div>
@@ -93,10 +94,12 @@ export default function FeaturedProjects() {
                                         <h3 className="product-title">{product.title}</h3>
                                     </div>
                                     <p className="product-description">{product.desc}</p>
-                                    {/* <Link href="#" className="button-navbar dark view-project-btn">
-                                        <div>View Project</div>
-                                        <ArrowRight size={16} />
-                                    </Link> */}
+                                    {product.link && (
+                                        <Link href={product.link} target="_blank" rel="noopener noreferrer" className="button-navbar dark view-project-btn">
+                                            <div>Connect</div>
+                                            <ArrowRight size={16} />
+                                        </Link>
+                                    )}
                                 </div>
                                 <div className="product-image">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
