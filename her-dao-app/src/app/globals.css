@@ -164,7 +164,7 @@ body {
 .partner-logos-track {
   display: flex;
   width: max-content;
-  animation: scroll 40s linear infinite;
+  animation: scroll 20s linear infinite;
   gap: 60px;
 }
 
@@ -1233,12 +1233,16 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .partner-logos-track {
+    animation-duration: 9s !important;
+  }
+
   /* Hero Mobile Updates */
   .wrapper-content-hero.home {
     padding-top: 30px;
     padding-bottom: 60px;
     justify-content: flex-start;
-    gap: 60px;
+    gap: 40px;
   }
 
   .hero-bottom-row {
@@ -1247,7 +1251,7 @@ a {
     /* Reverted to reverse for wrap: Socials bottom, Text top */
     align-items: center;
     /* Center everything on mobile */
-    gap: 30px;
+    gap: 20px;
     /* Increased gap to push socials down / text up */
   }
 
@@ -1284,7 +1288,7 @@ a {
 
 
   .text-hero-top {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .hero-text {
