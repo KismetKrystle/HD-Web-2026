@@ -20,7 +20,7 @@ export default function About() {
                 end: "bottom top",
                 scrub: 1,
             },
-            y: -100,
+            y: -300,
             rotation: 15,
             ease: "none"
         });
