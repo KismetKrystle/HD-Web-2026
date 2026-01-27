@@ -1214,7 +1214,8 @@ a {
   /* Achievements Mobile */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 32px 16px;
+    /* 32px vertical, 16px horizontal */
   }
 
   .stat-item.large {
@@ -1222,11 +1223,12 @@ a {
   }
 
   .stat-number {
-    font-size: 48px;
+    font-size: 32px;
   }
 
   .stat-text {
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 1.4;
   }
 
   .footer-content {
