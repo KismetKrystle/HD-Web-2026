@@ -740,7 +740,7 @@ a {
 }
 
 .product-card-inner {
-  background: var(--black);
+  background: var(--accent-purple);
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -1238,7 +1238,7 @@ a {
     padding-top: 30px;
     padding-bottom: 60px;
     justify-content: flex-start;
-    gap: 120px;
+    gap: 60px;
   }
 
   .hero-bottom-row {
@@ -1247,7 +1247,7 @@ a {
     /* Reverted to reverse for wrap: Socials bottom, Text top */
     align-items: center;
     /* Center everything on mobile */
-    gap: 50px;
+    gap: 30px;
     /* Increased gap to push socials down / text up */
   }
 

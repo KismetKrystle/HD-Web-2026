@@ -43,12 +43,12 @@ export default function FeaturedProjects() {
         {
             title: "H.E.R. DAO Labs",
             desc: "Innovation hub for blockchain development and research.",
-            badges: ["Branding", "Platform"],
+            badges: ["Development", "Incubator"],
             zIndex: 3,
             image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
         },
         {
-            title: "Hero Network",
+            title: "Herō Network",
             desc: "Decentralized infrastructure platform empowering Web3 builders.",
             badges: ["Infrastructure", "Platform"],
             zIndex: 2,

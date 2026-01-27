@@ -107,7 +107,7 @@ export default function ServiceCards() {
                         <span className="label-text">PRODUCTS</span>
                     </div>
                     <div className="overflow-hidden">
-                        <h2 className="section-title">FULL-SPECTRUM<br />DEVELOPMENT</h2>
+                        <h2 className="section-title">FULL-SPECTRUM<br /><span className="color-pink">DEVELOPMENT</span></h2>
                     </div>
                 </div>
 
