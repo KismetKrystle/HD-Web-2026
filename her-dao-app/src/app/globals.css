@@ -1187,14 +1187,14 @@ a {
 
   /* Featured Projects Mobile */
   .product-list {
-    gap: 40px;
+    gap: 100px;
   }
 
   .product-card {
     position: sticky;
     /* Re-enable sticky for scroll effect */
     top: 120px;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     /* Increase spacing */
     z-index: 1;
     /* Reset z-index management handled by inline styles/nth-child */
@@ -1204,7 +1204,7 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    min-height: 600px;
+    min-height: 500px;
     justify-content: flex-start;
   }
 
@@ -1222,7 +1222,7 @@ a {
   .product-header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 
   .product-badges {
@@ -1233,7 +1233,7 @@ a {
     order: 2;
     font-size: 32px;
     line-height: 1.2;
-    min-height: 78px;
+    min-height: 50px;
     /* Force 2 lines of space to ensure alignment below */
     display: flex;
     align-items: flex-end;
@@ -1244,7 +1244,7 @@ a {
     font-size: 18px;
     align-self: flex-start;
     max-width: 100%;
-    margin-top: 16px;
+    margin-top: 10px;
   }
 
   .product-image {
@@ -1252,7 +1252,7 @@ a {
     /* Image last */
     width: 100%;
     height: auto;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/4;
     object-fit: cover;
     /* Square or customize */
   }
