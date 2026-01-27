@@ -1204,7 +1204,7 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    min-height: 650px;
+    min-height: 550px;
     justify-content: flex-start;
   }
 
@@ -1212,7 +1212,7 @@ a {
     order: 1;
     /* Content first */
     padding: 0;
-    flex: 1;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1254,7 +1254,7 @@ a {
   }
 
   .product-card:nth-child(2) .product-card-inner {
-    min-height: 750px;
+    min-height: 650px;
   }
 
   /* Partners Marquee Mobile - Handled Globally now */
