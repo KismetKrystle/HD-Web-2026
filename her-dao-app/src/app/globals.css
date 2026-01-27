@@ -1194,7 +1194,7 @@ a {
     position: sticky;
     /* Re-enable sticky for scroll effect */
     top: 80px;
-    margin-bottom: 200px;
+    margin-bottom: 400px;
     /* Increase spacing */
     z-index: 1;
     /* Reset z-index management handled by inline styles/nth-child */
@@ -1204,8 +1204,8 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    min-height: 700px;
-    justify-content: space-between;
+    min-height: 650px;
+    justify-content: flex-start;
   }
 
   .product-content {
@@ -1241,7 +1241,6 @@ a {
     max-width: 100%;
     margin-top: 16px;
     max-width: 100%;
-    margin-top: 16px;
   }
 
   .product-image {
@@ -1249,8 +1248,13 @@ a {
     /* Image last */
     width: 100%;
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
+    object-fit: cover;
     /* Square or customize */
+  }
+
+  .product-card:nth-child(2) .product-card-inner {
+    min-height: 750px;
   }
 
   /* Partners Marquee Mobile - Handled Globally now */
