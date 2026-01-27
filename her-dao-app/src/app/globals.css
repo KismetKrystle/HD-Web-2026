@@ -1287,8 +1287,13 @@ a {
   }
 
 
+  .hero-top-row {
+    justify-content: center;
+  }
+
   .text-hero-top {
     font-size: 10px;
+    text-align: center;
   }
 
   .hero-text {
