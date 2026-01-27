@@ -742,7 +742,7 @@ a {
    ============================================ */
 .featured-products {
   background: var(--off-white);
-  padding: 120px 0 200px;
+  padding: 120px 0 800px;
   scroll-margin-top: 60px;
   z-index: 2;
 }
@@ -1193,8 +1193,8 @@ a {
   .product-card {
     position: sticky;
     /* Re-enable sticky for scroll effect */
-    top: 140px;
-    margin-bottom: 80px;
+    top: 70px;
+    margin-bottom: 200px;
     /* Increase spacing */
     z-index: 1;
     /* Reset z-index management handled by inline styles/nth-child */
@@ -1202,15 +1202,19 @@ a {
 
   .product-card-inner {
     flex-direction: column;
-    gap: 32px;
-    padding: 24px;
-    min-height: 600px;
+    gap: 20px;
+    padding: 20px;
+    min-height: 750px;
+    justify-content: space-between;
   }
 
   .product-content {
     order: 1;
     /* Content first */
     padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     text-align: left;
   }
@@ -1236,6 +1240,10 @@ a {
     align-self: flex-start;
     max-width: 100%;
     margin-top: 16px;
+    margin-bottom: auto;
+    /* Push content below it downwards */
+    flex-grow: 1;
+    /* Take up available space */
   }
 
   .product-image {
@@ -1551,4 +1559,12 @@ a {
   min-width: 140px;
   max-width: 200px;
   margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+  .view-project-btn {
+    padding: 10px 20px;
+    margin-top: 12px;
+    order: 4;
+  }
 }
