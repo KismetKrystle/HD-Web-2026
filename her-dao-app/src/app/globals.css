@@ -1193,7 +1193,7 @@ a {
   .product-card {
     position: sticky;
     /* Re-enable sticky for scroll effect */
-    top: 80px;
+    top: 100px;
     margin-bottom: 400px;
     /* Increase spacing */
     z-index: 1;
@@ -1204,7 +1204,7 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    min-height: 550px;
+    min-height: 600px;
     justify-content: flex-start;
   }
 
@@ -1253,9 +1253,7 @@ a {
     /* Square or customize */
   }
 
-  .product-card:nth-child(2) .product-card-inner {
-    min-height: 650px;
-  }
+
 
   /* Partners Marquee Mobile - Handled Globally now */
   /* .partner-marquee styles removed to inherit global */
