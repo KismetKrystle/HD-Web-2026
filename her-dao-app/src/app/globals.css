@@ -1194,7 +1194,7 @@ a {
     position: sticky;
     /* Re-enable sticky for scroll effect */
     top: 180px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     /* Increase spacing */
     z-index: 1;
     /* Reset z-index management handled by inline styles/nth-child */
