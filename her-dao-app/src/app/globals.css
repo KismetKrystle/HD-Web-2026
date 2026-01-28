@@ -1106,7 +1106,7 @@ a {
   .service-card-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 16px;
     width: 100%;
@@ -1125,6 +1125,13 @@ a {
     font-weight: 700;
     color: var(--black);
     text-align: left;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: 100%;
+    display: block;
+    line-height: 1.1;
+    word-wrap: break-word;
   }
 
   .service-image-wrapper {
