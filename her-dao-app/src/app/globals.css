@@ -1132,6 +1132,7 @@ a {
     display: block;
     line-height: 1.1;
     word-wrap: break-word;
+    margin-top: 4px;
   }
 
   .service-image-wrapper {
@@ -1397,7 +1398,8 @@ a {
   }
 
   .footer-title {
-    font-size: clamp(60px, 15vw, 100px);
+    font-size: clamp(32px, 12vw, 80px);
+    white-space: nowrap;
   }
 }
 
