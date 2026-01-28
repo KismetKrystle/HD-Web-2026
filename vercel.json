@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd her-dao-app && npm install && npm run build",
+  "outputDirectory": "her-dao-app/.next",
+  "installCommand": "cd her-dao-app && npm install",
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
