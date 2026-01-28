@@ -83,57 +83,43 @@ export default function FeaturedProjects() {
                 <div className="product-list">
                     {products.map((product, idx) => (
                         <div key={idx} className="product-card">
-                            {product.link ? (
-                                <Link
-                                    href={product.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="product-card-inner cursor-pointer"
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    <div className="product-content">
-                                        <div className="product-header">
-                                            <div className="product-badges">
-                                                {product.badges.map((badge, bIdx) => (
-                                                    <span key={bIdx} className="badge">{badge}</span>
-                                                ))}
-                                            </div>
-                                            <h3 className="product-title">{product.title}</h3>
+                            <div className="product-card-inner">
+                                <div className="product-content">
+                                    <div className="product-header">
+                                        <div className="product-badges">
+                                            {product.badges.map((badge, bIdx) => (
+                                                <span key={bIdx} className="badge">{badge}</span>
+                                            ))}
                                         </div>
-                                        <p className="product-description">{product.desc}</p>
+                                        <h3 className="product-title">{product.title}</h3>
                                     </div>
-                                    <div className="product-image">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
-                                            src={product.image}
-                                            alt={product.title}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
-                                        />
-                                    </div>
-                                </Link>
-                            ) : (
-                                <div className="product-card-inner">
-                                    <div className="product-content">
-                                        <div className="product-header">
-                                            <div className="product-badges">
-                                                {product.badges.map((badge, bIdx) => (
-                                                    <span key={bIdx} className="badge">{badge}</span>
-                                                ))}
-                                            </div>
-                                            <h3 className="product-title">{product.title}</h3>
+                                    <p className="product-description">{product.desc}</p>
+
+                                    {/* Link Button or Spacer */}
+                                    {product.link ? (
+                                        <Link href={product.link} target="_blank" rel="noopener noreferrer" className="button-navbar dark view-project-btn">
+                                            <div>Connect</div>
+                                            <ArrowRight size={16} />
+                                        </Link>
+                                    ) : (
+                                        <div
+                                            className="button-navbar dark view-project-btn"
+                                            style={{ visibility: 'hidden', pointerEvents: 'none' }}
+                                        >
+                                            <div>Connect</div>
+                                            <ArrowRight size={16} />
                                         </div>
-                                        <p className="product-description">{product.desc}</p>
-                                    </div>
-                                    <div className="product-image">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
-                                            src={product.image}
-                                            alt={product.title}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
-                                        />
-                                    </div>
+                                    )}
                                 </div>
-                            )}
+                                <div className="product-image">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={product.image}
+                                        alt={product.title}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
