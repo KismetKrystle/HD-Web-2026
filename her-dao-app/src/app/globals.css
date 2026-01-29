@@ -750,7 +750,7 @@ a {
    ============================================ */
 .featured-products {
   background: var(--off-white);
-  padding: 120px 0 800px;
+  padding: 120px 0 200px;
   scroll-margin-top: 60px;
   z-index: 2;
 }
