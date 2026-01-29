@@ -66,6 +66,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 body {
@@ -74,6 +76,14 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  background-color: var(--off-white);
+  width: 100%;
 }
 
 .container {

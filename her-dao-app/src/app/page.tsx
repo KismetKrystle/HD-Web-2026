@@ -11,11 +11,13 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <About />
-      <FeaturedProjects />
-      <ServiceCards />
-      <Achievement />
-      <Footer />
+      <div className="main-content">
+        <About />
+        <FeaturedProjects />
+        <ServiceCards />
+        <Achievement />
+        <Footer />
+      </div>
     </main>
   )
 }
