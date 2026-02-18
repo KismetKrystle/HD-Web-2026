@@ -72,9 +72,9 @@ export default function ServiceCards() {
         },
         {
             id: "03",
-            title: "Cyber Security",
+            title: "Cyber Security School",
             desc: "Security audit and training services to protect blockchain infrastructure.",
-            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769341331/her_dao_cyber_security_z2wp6t.png"
+            image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1771427179/cyber_school_her_dao_nkbake.jpg"
         },
         {
             id: "04",

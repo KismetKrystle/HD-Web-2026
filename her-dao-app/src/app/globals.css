@@ -745,6 +745,12 @@ a {
   letter-spacing: 2px;
 }
 
+/* Fix for Cyber Security card image cropping */
+/* Fix for Cyber Security card image alignment */
+.service-cards-desktop .service-card:nth-child(3) .service-card-img {
+  object-position: center 25%;
+}
+
 /* ============================================
    PRODUCTS SECTION 2 - Sticky Scroll Cards
    ============================================ */
