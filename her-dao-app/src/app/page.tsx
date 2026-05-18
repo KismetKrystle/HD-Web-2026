@@ -10,8 +10,10 @@ import RustSchoolBanner from "@/components/sections/RustSchoolBanner"
 export default function Home() {
   return (
     <main>
-      <RustSchoolBanner />
-      <Navbar />
+      <div style={{ position: 'sticky', top: 0, zIndex: 1002, width: '100%' }}>
+        <RustSchoolBanner />
+        <Navbar />
+      </div>
       <Hero />
       <div className="main-content">
         <About />
