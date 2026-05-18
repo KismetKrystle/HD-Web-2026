@@ -9,11 +9,21 @@ import { ArrowRight } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
+// --- Type definition ---
+type Product = {
+    title: string
+    desc: string
+    badges: string[]
+    image: string
+    link?: string
+    linkLabel?: string       // optional — falls back to "Connect" if not set
+    curriculumUrl?: string   // optional — renders a secondary text link if provided
+}
+
 export default function FeaturedProjects() {
     const container = useRef(null)
 
     useGSAP(() => {
-        // Title animation
         gsap.from(".section-title", {
             scrollTrigger: {
                 trigger: container.current,
@@ -24,7 +34,6 @@ export default function FeaturedProjects() {
             ease: "power2.out"
         });
 
-        // Product cards - Fade in (target inner content to avoid breaking sticky parent)
         gsap.from(".product-card-inner", {
             scrollTrigger: {
                 trigger: ".product-list",
@@ -39,27 +48,34 @@ export default function FeaturedProjects() {
         });
     }, { scope: container })
 
-    const products = [
+    const products: Product[] = [
+        {
+            title: "Rust School 🦀",
+            desc: "Beginner-to-intermediate Rust program built around systems thinking, real projects, and production code. Cohort 01 is live — applications open now.",
+            badges: ["Education", "Live Now"],
+            image: "https://res.cloudinary.com/dphncpfbw/image/upload/v1779064470/rustflyer1_tj1nfm.jpg", // ← upload Image 1 to Cloudinary and paste the URL here
+            link: "https://forms.fillout.com/t/8HzdmCV7c6us",
+            linkLabel: "Apply Now",
+            curriculumUrl: "https://res.cloudinary.com/dphncpfbw/image/upload/v1779064470/rustflyer1schedule_waxo1x.jpg" // ← upload Image 2 to Cloudinary and paste here
+        },
         {
             title: "Herō Network",
             desc: "Decentralized infrastructure platform empowering Web3 builders.",
             badges: ["Infrastructure", "Platform"],
-            zIndex: 2,
             image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769340952/hero_mjk1fz.svg",
-            link: "https://heronetwork.xyz"
+            link: "https://heronetwork.xyz",
+            linkLabel: "Connect"
         },
         {
             title: "H.E.R. DAO Labs",
             desc: "Innovation hub for blockchain development and research.",
             badges: ["Development", "Incubator"],
-            zIndex: 3,
             image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
         },
         {
             title: "H.E.R. CON",
             desc: "Annual blockchain conference celebrating women in Web3.",
             badges: ["Event", "Community"],
-            zIndex: 1,
             image: "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769339672/her-con-flyer_qahw3f.avif"
         }
     ]
@@ -95,12 +111,41 @@ export default function FeaturedProjects() {
                                     </div>
                                     <p className="product-description">{product.desc}</p>
 
-                                    {/* Link Button or Spacer */}
                                     {product.link ? (
-                                        <Link href={product.link} target="_blank" rel="noopener noreferrer" className="button-navbar dark view-project-btn">
-                                            <div>Connect</div>
-                                            <ArrowRight size={16} />
-                                        </Link>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                            <Link
+                                                href={product.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="button-navbar dark view-project-btn"
+                                            >
+                                                <div>{product.linkLabel ?? "Connect"}</div>
+                                                <ArrowRight size={16} />
+                                            </Link>
+                                            {product.curriculumUrl && (
+                                                <Link
+                                                    href={product.curriculumUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{
+                                                        fontSize: '14px',
+                                                        fontWeight: 500,
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.5px',
+                                                        color: '#ffffff',
+                                                        textDecoration: 'underline',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: '8px',
+                                                        transition: 'opacity 0.2s',
+                                                    }}
+                                                    onMouseEnter={e => (e.currentTarget.style.opacity = '0.7')}
+                                                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                                                >
+                                                    View Curriculum
+                                                </Link>
+                                            )}
+                                        </div>
                                     ) : (
                                         <div
                                             className="button-navbar dark view-project-btn"
@@ -116,7 +161,7 @@ export default function FeaturedProjects() {
                                     <img
                                         src={product.image}
                                         alt={product.title}
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
+                                        style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
                                     />
                                 </div>
                             </div>

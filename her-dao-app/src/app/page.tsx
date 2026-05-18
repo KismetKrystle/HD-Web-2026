@@ -5,10 +5,12 @@ import ServiceCards from "@/components/sections/ServiceCards"
 import FeaturedProjects from "@/components/sections/FeaturedProjects"
 import Achievement from "@/components/sections/Achievement"
 import Footer from "@/components/layout/Footer"
+import RustSchoolBanner from "@/components/sections/RustSchoolBanner"
 
 export default function Home() {
   return (
     <main>
+      <RustSchoolBanner />
       <Navbar />
       <Hero />
       <div className="main-content">
