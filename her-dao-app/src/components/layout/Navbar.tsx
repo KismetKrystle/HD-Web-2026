@@ -2,24 +2,29 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
+
+const LOGO_LIGHT = "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
+const LOGO_DARK  = "https://res.cloudinary.com/dphncpfbw/image/upload/v1779075198/H.E.R._DAO_WHITE_LOGO_vilbfo.png"
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const { resolvedTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => { setMounted(true) }, [])
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true)
-            } else {
-                setScrolled(false)
-            }
+            setScrolled(window.scrollY > 50)
         }
-
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
+    const logoSrc = mounted && resolvedTheme === 'dark' ? LOGO_DARK : LOGO_LIGHT
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -27,7 +32,7 @@ export default function Navbar() {
                 <Link href="#hero" className="brand">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                        src="https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
+                        src={logoSrc}
                         alt="H.E.R. DAO"
                         className="navbar-logo"
                         style={{ height: '32px', width: 'auto' }}
