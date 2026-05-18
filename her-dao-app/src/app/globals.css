@@ -786,6 +786,10 @@ a {
   z-index: 3;
 }
 
+.product-card:nth-child(4) {
+  z-index: 4;
+}
+
 .product-card-inner {
   background: var(--accent-purple);
   border-radius: 16px;
