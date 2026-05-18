@@ -815,12 +815,12 @@ a {
   gap: 32px;
   align-items: center;
   transition: all 0.4s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
 }
 
 .product-card:hover .product-card-inner {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
 .product-content {
