@@ -15,14 +15,25 @@ export const metadata: Metadata = {
   },
 }
 
+import { ThemeProvider } from '@/components/providers/ThemeProvider'
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={interTight.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={interTight.className}>
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

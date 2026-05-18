@@ -43,6 +43,19 @@
   --hero-spacing-bottom: 90px;
 }
 
+[data-theme='dark'] {
+  --white: #121212;
+  --off-white: #0a0a0a;
+  --black: #ffffff;
+  --dark-gray: #e5e5e5;
+  --text-dark: #fafafa;
+  --text-gray: #a3a3a3;
+  /* Accents remain the same for brand consistency */
+  --accent: #6366F1;
+  --accent-purple: #8B5CF6;
+  --accent-pink: #EC4899;
+}
+
 .color-purple {
   color: var(--accent-purple);
 }

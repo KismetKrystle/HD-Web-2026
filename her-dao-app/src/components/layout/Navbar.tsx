@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -37,9 +38,12 @@ export default function Navbar() {
                     <a href="#achievement" className="nav-link" onClick={() => setMenuOpen(false)}>ACHIEVEMENTS</a>
                     <Link href="#products" className="nav-link" onClick={() => setMenuOpen(false)}>PRODUCTS</Link>
                 </div>
-                <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="button-navbar">
-                    <div>Join Us</div>
-                </Link>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                    <ThemeToggle />
+                    <Link href="https://t.me/herdao" target="_blank" rel="noopener noreferrer" className="button-navbar">
+                        <div>Join Us</div>
+                    </Link>
+                </div>
                 <div
                     className={`menu-toggle ${menuOpen ? 'active' : ''}`}
                     onClick={() => setMenuOpen(!menuOpen)}
