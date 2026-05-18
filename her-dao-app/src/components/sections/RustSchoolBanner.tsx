@@ -12,7 +12,7 @@ export default function RustSchoolBanner() {
     return (
         <div style={{
             width: '100%',
-            backgroundColor: 'rgba(255, 255, 255, 0.5)',
+            backgroundColor: '#1a0a2e',
             borderBottom: '1px solid rgba(199, 93, 255, 0.3)',
             padding: '12px 24px',
             display: 'flex',

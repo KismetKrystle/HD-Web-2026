@@ -1,11 +1,21 @@
 "use client"
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 import ContactModal from '../ui/ContactModal'
+
+const LOGO_LIGHT = "https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
+const LOGO_DARK  = "https://res.cloudinary.com/dphncpfbw/image/upload/v1779075198/H.E.R._DAO_WHITE_LOGO_vilbfo.png"
 
 export default function Footer() {
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const { resolvedTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => { setMounted(true) }, [])
+
+    const logoSrc = mounted && resolvedTheme === 'dark' ? LOGO_DARK : LOGO_LIGHT
 
     return (
         <>
@@ -48,14 +58,13 @@ export default function Footer() {
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
                             </Link>
-
                         </div>
 
                         <div className="footer-bottom">
                             <div className="footer-brand">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src="https://res.cloudinary.com/dsoojlgg1/image/upload/v1769332904/logo_black_light-mode_zzw5oi.png"
+                                    src={logoSrc}
                                     alt="H.E.R. DAO"
                                     className="footer-logo"
                                     style={{ height: '24px', marginBottom: '12px', opacity: 0.8 }}
