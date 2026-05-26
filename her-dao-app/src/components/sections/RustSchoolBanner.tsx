@@ -46,15 +46,8 @@ export default function RustSchoolBanner() {
                 fontWeight: 500,
                 textAlign: 'center',
             }}>
-                <strong style={{ color: '#ffffff' }}>Rust School Cohort 01</strong> is underway — started May 12th.
-                Haven&apos;t received your invite?{' '}
-                <Link
-                    href="mailto:contact@rust-school.xyz"
-                    style={{ color: '#c75dff', textDecoration: 'underline', whiteSpace: 'nowrap' }}
-                >
-                    contact@rust-school.xyz
-                </Link>
-                {' '}or{' '}
+                <strong style={{ color: '#ffffff' }}>Rust School Cohort 02</strong> is starting soon— to begin June 23rd.
+                Have you joined?{' '}
                 <Link
                     href="https://t.me/herdao"
                     target="_blank"
@@ -67,7 +60,7 @@ export default function RustSchoolBanner() {
 
             {/* CTA */}
             <Link
-                href="https://forms.fillout.com/t/8HzdmCV7c6us"
+                href="https://luma.com/22b2hyx3"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
